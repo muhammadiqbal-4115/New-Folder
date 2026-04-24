@@ -1,6 +1,7 @@
-def main():
-    print("Hello from new-folder!")
+from fastapi import FastAPI
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get('/')
+async def index():
+    return {"Hello! 1st Class."}
